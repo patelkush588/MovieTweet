@@ -32,7 +32,7 @@ print query_ex1()
 
 def wordc():
     tweets=open(""+movie+".txt").read()
-    word_cloud = WordCloud(stopwords='https',max_font_size=50).generate(tweets)
+    word_cloud = WordCloud(stopwords= "movie review" ,max_font_size=50).generate(tweets)
     plt.figure()
     plt.imshow(word_cloud, interpolation="bilinear")
     plt.axis("off")
