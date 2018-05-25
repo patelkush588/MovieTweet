@@ -44,12 +44,6 @@ data = Orange.data.Table("data.basket")
 # Identify association rules with supports at least 0.3
 rules = Orange.associate.AssociationRulesSparseInducer(data, support = 0.2)
 
-
-# print out rules
-#print "%4s %4s  %s" % ("Supp", "Conf", "Rule")
-#for r in rules[:]:
- #   print "%4.1f %4.1f  %s" % (r.support, r.confidence, r)
-
 rule = rules[0]
 maximum = 0.1
 for idx, d in enumerate(data):
